@@ -45,6 +45,17 @@ class Player
 
 end
 
-# faut voir si ça me sert à quelque chose else
-#  @show_state = life_points #je suis sur qulque chose là end
-#  if Player#{@name}
+
+class HumanPlayer < Player    # héritage de la classe Player
+  attr_accessor :weapon_level
+
+  def initialize(player_name)
+    @weapon_level = 1
+        super
+    @life_points = 100
+
+  end
+
+  def show_state
+    puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
+  end
