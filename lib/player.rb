@@ -8,8 +8,7 @@ class Player
       @life_points = 10
   end
 
-  # Je devrais pas faire un truc du genre ? j'ai deux joueurs après tout julie = User.new("julie@email.com", 35)
-  #jean = User.new("jean@maimail.com", 22) p-e dans le fichier app avec la boucle While décrite par le prof
+
 
   #Les Méthodes
 
@@ -33,7 +32,7 @@ class Player
       puts "Le courageux #{@name} attaque avec vigueur #{player.name} !"
   #il faut que je fasse appel à la méthode compute_damage
       degats = compute_damage
-      puts "Le sanguinaire combattant a infligé #{degats} points de dommages." #je suis pas sûre pour la partie après infligé
+      puts "Le sanguinaire combattant a infligé #{degats} points de dommages."
       player.gets_damage(degats)
   end
 
@@ -59,7 +58,7 @@ class HumanPlayer < Player    # héritage de la classe Player
   def show_state
     puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
   end
-  
+
   def compute_damage
      rand(1..6) * @weapon_level
    end
