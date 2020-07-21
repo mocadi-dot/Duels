@@ -59,3 +59,7 @@ class HumanPlayer < Player    # héritage de la classe Player
   def show_state
     puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
   end
+  
+  def compute_damage
+     rand(1..6) * @weapon_level
+   end
